@@ -1,0 +1,53 @@
+@startuml
+
+class Client {
+	CreateRule()
+	CheckRequest()
+	ruleSet
+}
+
+note left of Client
+<b>CreateRule:</b>
+r = proto.Clone();
+}
+
+note left of Client
+<b>CheckRequest:</b>
+foreach (var rule in ruleSet) 
+	if (! rule.Check(user, request) )
+		throw new SecurityException();
+}
+
+class Rule {
+	Clone()
+	Check(user, request)
+}
+
+class ProtocolRule {
+	Clone()
+	Check(user, request)
+}
+
+class URLRule {
+	Clone()
+	Check(user, request)
+}
+
+class TimeRule {
+	Clone()
+	Check(user, request)
+}
+
+class TypeRule {
+	Clone()
+	Check(user, request)
+}
+
+Client --> Rule : proto
+
+Rule <|-- ProtocolRule
+Rule <|-- URLRule
+Rule <|-- TimeRule
+Rule <|-- TypeRule
+
+@enduml

@@ -1,0 +1,8 @@
+actor Person
+Person -> Queue : Кто последний?
+Queue -> Person : Спросите вон там.
+Person -> Queue : Кто последний?
+Queue -> Person : Спросите вот тут.
+Person -> Queue : Кто последний-то, а?
+Queue -> Person : Вася
+Person -> Queue : За ним буду

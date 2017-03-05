@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = function() {
+
+        var log = document.getElementById('log');
+
+        function Queue(length, lastPersonName) {
+            this.length = length;
+            this.lastPersonName = lastPersonName;
+        }
+
+        Queue.prototype.redirect = function(person, place) {
+            log.innerHTML += '&mdash; ' + person.name + ", " + place + " спросите.<br>";
+            person.goTo(place);
+        };
+
+        Queue.prototype.getLast = function() {
+            log.innerHTML += '&mdash; Ну я последний, &mdash; сказал ' + this.lastPersonName + '.<br>';
+        };
+
+        function Person(name, place, numberInQueue) {
+            this.name = name;
+            this.place = place;
+            this.numberInQueue = numberInQueue;
+        }
+
+        Person.prototype.goTo = function(place) {
+            this.place = place;
+            log.innerHTML += '<b>Место действия</b>: ' + this.place + '<br>';
+        };
+
+        Person.prototype.ask = function(question) {
+            log.innerHTML += '&mdash; ' + question + ' &mdash; спросил ' + this.name + '.<br>';
+        };
+
+        Person.prototype.takePlace = function(number) {
+            this.numberInQueue = number;
+            log.innerHTML += '&mdash; За вами буду.<br>';
+        };
+
+        var queue = new Queue(30, 'Вася'),
+            person = new Person('Петя', 'Больница', 0);
+
+        person.goTo('Перед магазином');
+        person.ask('Кто последний?');
+        queue.redirect(person, 'вон там');
+        person.ask('Кто последний?');
+        queue.redirect(person, 'вот тут');
+        person.ask('Кто последний-то, а?');
+        queue.getLast();
+        person.takePlace(queue.length + 1);
+    }
+</script>
+<body>
+    <div id="log">
+        
+    </div>
+</body>
+</html>

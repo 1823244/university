@@ -1,0 +1,13 @@
+@startuml
+
+Caretaker -> AttackDetector : CreateMemento()
+AttackDetector -> Memento : new Memento
+AttackDetector -> Memento : SetState()
+Memento --> AttackDetector : aMemento
+AttackDetector --> Caretaker : aMemento
+
+Caretaker -> AttackDetector : SetMemento(aMemento)
+AttackDetector -> Memento : GetState()
+Memento --> AttackDetector : aAttackDetector
+
+@enduml

@@ -1,0 +1,40 @@
+@startuml
+App --> Detector
+
+class Detector {
+	GetStatus()
+	GetQuarantine()
+	Add()
+	Remove()
+	rights
+}
+
+class AttackDetector {
+	GetStatus()
+	GetQuarantine()
+	Add()
+	Remove()
+	rights
+}
+
+class AttackDetectorProxy {
+	GetStatus()
+	GetQuarantine()
+	Add()
+	Remove()
+	rights
+}
+
+Detector <|-- AttackDetector
+Detector <|-- AttackDetectorProxy
+
+note left of AttackDetectorProxy
+<b>GetQuarantine:</b>
+if (User->GetRights == rights)
+	return AttackDetector->GetQuarantine();
+else
+	throw RightsException();
+}
+
+AttackDetectorProxy "detector" --> AttackDetector
+@enduml

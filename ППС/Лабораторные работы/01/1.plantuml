@@ -1,0 +1,42 @@
+object School
+object Man
+object Thing
+object Master
+object Room
+object Furniture
+object SchoolBoard
+object Class
+object Playground
+object Book
+object Student
+object Teacher
+object Cafeteria
+object RestRoom
+object Computer
+object Desk
+object Chair
+object Ruler
+object Door
+object Swing
+
+School *-- SchoolBoard
+School *-- Room
+School o-- Door
+School -- Playground
+School o-- Man
+Man <|-- Master
+Man <|-- Teacher
+Man <|-- Student
+Playground o-- Swing
+Thing <|-- Ruler
+Thing <|-- Computer
+Thing <|-- Book
+Thing <|-- Furniture
+Room o-- Thing
+Room <|-- Class
+Room <|-- RestRoom
+Room o-- Door
+Furniture <|-- Desk
+Furniture <|-- Chair
+RestRoom <|-- Cafeteria
+

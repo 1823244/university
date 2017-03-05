@@ -1,0 +1,28 @@
+@startuml
+
+class Memento {
+	GetState()
+	SetState()
+	state
+}
+
+class AttackDetector {
+	SetMemento(Memento m)
+	CreateMemento()
+	state
+}
+
+Caretaker --o Memento
+AttackDetector ..> Memento : create object >
+
+note left of AttackDetector
+<b>CreateMemento:</b>
+return new Memento(state)
+}
+
+note right of AttackDetector
+<b>SetMemento:</b>
+state = m->GetState()
+}
+
+@enduml
