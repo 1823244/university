@@ -1,0 +1,14 @@
+program lab_2;
+
+var
+  Ax, Ay, Bx, By, Cx, Cy: real; 
+  AB, BC, AC: real; 
+  Epsilon: real; 
+
+begin
+
+  AB := sqr(Bx - Ax) + sqr(By - Ay);
+  BC := sqr(Cx - Bx) + sqr(Cy - By);
+  AC := sqr(Cx - Ax) + sqr(Cy - Ay);
+
+end.
