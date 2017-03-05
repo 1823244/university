@@ -1,0 +1,440 @@
+set top_net [getTopNet $net]
+set SAVED_WITH_VERSION {2.4.0-RC1 made on Tue, 02 Jun 2015 11:57:58 -0400.  VCRevInfo 2773.  Installed on Windows}
+setDefaultCompareMode $net switch_to_matrix
+set x -28
+set y -5
+set desc {description}
+set name {Alternatives}
+set color white
+set iconUU {no icon data}
+set iconFont "-*-times-medium-r-normal-*-12-*-*-*-*-*"
+set winFont "-*-Verdana-medium-r-normal-*-12-*-*-*-*-*"
+set width 259
+set height 7
+set clusterName {Alternatives}
+set clusterCompareWord {important}
+makeCluster $net $x $y $name $desc
+clusterChangeColor $net $name $color
+setClusterIconUU $net $name $iconUU
+setClusterIconFont $net $name $iconFont
+setClusterTitleFont $net $name $winFont
+setClusterWinSize $net $name $width $height
+setClusterCompareWord $net $name $clusterCompareWord
+deIconizeCluster $net $name
+set name {Meizu MX4}
+set desc {description}
+set x 0
+set y 0
+set color {white}
+set iconUU {}
+set font {-*-Arial-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {OnePlus One}
+set desc {description}
+set x 79
+set y 0
+set color {white}
+set iconUU {}
+set font {-*-Arial-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {Xiaomi Mi4}
+set desc {description}
+set x 175
+set y 0
+set color {white}
+set iconUU {}
+set font {-*-Arial-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set x 303
+set y 146
+set desc {description}
+set name {Disadvantages}
+set color white
+set iconUU {}
+set iconFont "-*-times-medium-r-normal-*-12-*-*-*-*-*"
+set winFont "-*-Verdana-medium-r-normal-*-12-*-*-*-*-*"
+set width 52
+set height 119
+set clusterName {Disadvantages}
+set clusterCompareWord {}
+makeCluster $net $x $y $name $desc
+clusterChangeColor $net $name $color
+setClusterIconUU $net $name $iconUU
+setClusterIconFont $net $name $iconFont
+setClusterTitleFont $net $name $winFont
+setClusterWinSize $net $name $width $height
+setClusterCompareWord $net $name $clusterCompareWord
+deIconizeCluster $net $name
+set name {Cost of repairs}
+set desc {description}
+set x 0
+set y 0
+set color {white}
+set iconUU {}
+set font {-*-Arial-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {Massiveness}
+set desc {description}
+set x 0
+set y 38
+set color {white}
+set iconUU {}
+set font {-*-Arial-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {Power consumption}
+set desc {description}
+set x 0
+set y 76
+set color {white}
+set iconUU {}
+set font {-*-Arial-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set x -3
+set y 362
+set desc {description}
+set name {First impression}
+set color white
+set iconUU {}
+set iconFont "-*-times-medium-r-normal-*-12-*-*-*-*-*"
+set winFont "-*-Verdana-medium-r-normal-*-12-*-*-*-*-*"
+set width 209
+set height 24
+set clusterName {First impression}
+set clusterCompareWord {}
+makeCluster $net $x $y $name $desc
+clusterChangeColor $net $name $color
+setClusterIconUU $net $name $iconUU
+setClusterIconFont $net $name $iconFont
+setClusterTitleFont $net $name $winFont
+setClusterWinSize $net $name $width $height
+setClusterCompareWord $net $name $clusterCompareWord
+deIconizeCluster $net $name
+set name {Appearance}
+set desc {description}
+set x 0
+set y 0
+set color {white}
+set iconUU {}
+set font {-*-Arial-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {Compact}
+set desc {description}
+set x 88
+set y 0
+set color {white}
+set iconUU {}
+set font {-*-Arial-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {Cost}
+set desc {description}
+set x 160
+set y 0
+set color {white}
+set iconUU {}
+set font {-*-Arial-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set x -243
+set y 146
+set desc {description}
+set name {General properties}
+set color white
+set iconUU {}
+set iconFont "-*-times-medium-r-normal-*-12-*-*-*-*-*"
+set winFont "-*-Verdana-medium-r-normal-*-12-*-*-*-*-*"
+set width -60
+set height 120
+set clusterName {General properties}
+set clusterCompareWord {important}
+makeCluster $net $x $y $name $desc
+clusterChangeColor $net $name $color
+setClusterIconUU $net $name $iconUU
+setClusterIconFont $net $name $iconFont
+setClusterTitleFont $net $name $winFont
+setClusterWinSize $net $name $width $height
+setClusterCompareWord $net $name $clusterCompareWord
+deIconizeCluster $net $name
+set name {Battary capacity}
+set desc {description}
+set x 0
+set y 0
+set color {white}
+set iconUU {}
+set font {-*-Arial-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {Power}
+set desc {description}
+set x 0
+set y 38
+set color {white}
+set iconUU {}
+set font {-*-Arial-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {Screen resolution}
+set desc {description}
+set x 0
+set y 76
+set color {white}
+set iconUU {}
+set font {-*-Arial-medium-r-normal-*-12-*-*-*-*-*}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set init {First impression}
+set final {Alternatives}
+connectClusters $net $init $final
+set init {Alternatives}
+set final {Disadvantages}
+connectClusters $net $init $final
+set init {General properties}
+set final {Disadvantages}
+connectClusters $net $init $final
+set init {Alternatives}
+set final {First impression}
+connectClusters $net $init $final
+set init {Disadvantages}
+set final {First impression}
+connectClusters $net $init $final
+set init {General properties}
+set final {First impression}
+connectClusters $net $init $final
+set init {Alternatives}
+set final {General properties}
+connectClusters $net $init $final
+nodeCompareFinished $net {Appearance} {Alternatives} 1
+setNodeCompareWord  $net {Appearance} {Alternatives} {important}
+nodeCompareFinished $net {Battary capacity} {Disadvantages} 1
+setNodeCompareWord  $net {Battary capacity} {Disadvantages} {important}
+nodeCompareFinished $net {Battary capacity} {First impression} 1
+setNodeCompareWord  $net {Battary capacity} {First impression} {important}
+nodeCompareFinished $net {Compact} {Alternatives} 1
+setNodeCompareWord  $net {Compact} {Alternatives} {important}
+nodeCompareFinished $net {Cost} {Alternatives} 1
+setNodeCompareWord  $net {Cost} {Alternatives} {important}
+nodeCompareFinished $net {Cost of repairs} {First impression} 1
+setNodeCompareWord  $net {Cost of repairs} {First impression} {important}
+nodeCompareFinished $net {Massiveness} {First impression} 1
+setNodeCompareWord  $net {Massiveness} {First impression} {important}
+nodeCompareFinished $net {Meizu MX4} {Disadvantages} 1
+setNodeCompareWord  $net {Meizu MX4} {Disadvantages} {important}
+nodeCompareFinished $net {Meizu MX4} {First impression} 1
+setNodeCompareWord  $net {Meizu MX4} {First impression} {important}
+nodeCompareFinished $net {Meizu MX4} {General properties} 1
+setNodeCompareWord  $net {Meizu MX4} {General properties} {important}
+nodeCompareFinished $net {OnePlus One} {Disadvantages} 1
+setNodeCompareWord  $net {OnePlus One} {Disadvantages} {important}
+nodeCompareFinished $net {OnePlus One} {First impression} 1
+setNodeCompareWord  $net {OnePlus One} {First impression} {important}
+nodeCompareFinished $net {OnePlus One} {General properties} 1
+setNodeCompareWord  $net {OnePlus One} {General properties} {important}
+nodeCompareFinished $net {Power} {Disadvantages} 1
+setNodeCompareWord  $net {Power} {Disadvantages} {important}
+nodeCompareFinished $net {Power} {First impression} 1
+setNodeCompareWord  $net {Power} {First impression} {important}
+nodeCompareFinished $net {Power consumption} {First impression} 1
+setNodeCompareWord  $net {Power consumption} {First impression} {important}
+nodeCompareFinished $net {Screen resolution} {Disadvantages} 1
+setNodeCompareWord  $net {Screen resolution} {Disadvantages} {important}
+nodeCompareFinished $net {Screen resolution} {First impression} 1
+setNodeCompareWord  $net {Screen resolution} {First impression} {important}
+nodeCompareFinished $net {Xiaomi Mi4} {Disadvantages} 1
+setNodeCompareWord  $net {Xiaomi Mi4} {Disadvantages} {important}
+nodeCompareFinished $net {Xiaomi Mi4} {First impression} 1
+setNodeCompareWord  $net {Xiaomi Mi4} {First impression} {important}
+nodeCompareFinished $net {Xiaomi Mi4} {General properties} 1
+setNodeCompareWord  $net {Xiaomi Mi4} {General properties} {important}
+setNetCompareWord $net {important}
+setNetClusterColor $net {white}
+setNetNodeColor $net {white}
+setNetClusterWinFont $net {-*-Verdana-medium-r-normal-*-12-*-*-*-*-*}
+setNetClusterIconFont $net {-*-times-medium-r-normal-*-12-*-*-*-*-*}
+setNetNodeFont $net {-*-Arial-medium-r-normal-*-12-*-*-*-*-*}
+setFormulaType $net 0
+#Working on net 0
+catch {limitPowerOptions $net 2 0}
+c-network readAllCompares -network $net -source {
+4
+Alternatives
+3
+Meizu MX4
+Xiaomi Mi4
+OnePlus One
+General properties
+3
+Screen resolution
+Battary capacity
+Power
+Disadvantages
+3
+Cost of repairs
+Massiveness
+Power consumption
+First impression
+3
+Appearance
+Compact
+Cost
+
+4 1,0 0,1 3,2 2,3 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 1.000000  1.000000  0.000000  1.000000 
+ 1.000000  1.000000  0.000000  0.000000 
+0
+3 1,0 2,1 3,2 
+ 7.000007  3.000003 
+ 0.333333 
+
+1
+2 3,0 2,1 
+ 0.200000 
+
+2
+1 3,0 
+
+3
+1 0,0 
+
+0,0,1
+3 1,0 2,1 0,2 
+ 0.333333  0.500000 
+ 5.000000 
+
+0,1,1
+3 1,0 2,1 0,2 
+ 0.500000  0.500000 
+ 4.000000 
+
+0,2,1
+3 1,0 2,1 0,2 
+ 4.000000  3.000000 
+ 0.500000 
+
+0,0,2
+3 0,0 1,1 2,2 
+ 0.333333  0.333333 
+ 0.500000 
+
+0,1,2
+3 0,0 1,1 2,2 
+ 0.333333  0.500000 
+ 0.500000 
+
+0,2,2
+3 0,0 1,1 2,2 
+ 0.200000  0.500000 
+ 0.250000 
+
+0,0,3
+3 0,0 1,1 2,2 
+ 3.000000  2.000000 
+ 0.200000 
+
+0,1,3
+3 0,0 1,1 2,2 
+ 5.000000  3.000000 
+ 0.166667 
+
+0,2,3
+3 0,0 1,1 2,2 
+ 4.000000  0.500000 
+ 0.166667 
+
+1,0,2
+3 0,0 1,1 2,2 
+ 0.200000  0.142857 
+ 0.333333 
+
+1,1,2
+3 0,0 1,1 2,2 
+ 0.333333  0.142857 
+ 0.250000 
+
+1,2,2
+3 0,0 1,1 2,2 
+ 0.200000  0.142857 
+ 0.250000 
+
+1,0,3
+3 0,0 1,1 2,2 
+ 3.000000  3.000000 
+ 0.500000 
+
+1,1,3
+3 0,0 1,1 2,2 
+ 0.200000  0.333333 
+ 3.000000 
+
+1,2,3
+3 0,0 1,1 2,2 
+ 0.250000  0.142857 
+ 0.200000 
+
+2,0,3
+3 0,0 1,1 2,2 
+ 5.000000  3.000000 
+ 0.200000 
+
+2,1,3
+3 0,0 1,1 2,2 
+ 0.500000  5.000000 
+ 7.000000 
+
+2,2,3
+3 0,0 1,1 2,2 
+ 0.333333  0.200000 
+ 0.333333 
+
+3,0,0
+3 0,0 2,1 1,2 
+ 3.000000  0.333333 
+ 0.142857 
+
+3,1,0
+3 0,0 2,1 1,2 
+ 3.000000  0.500000 
+ 0.200000 
+
+3,2,0
+3 0,0 2,1 1,2 
+ 2.000000  0.500000 
+ 0.333333 
+
+}
+
+set FORMAT 1
+recreateNetInsideFrameOnly $net
+catch {backupRestoreFromUUencodedString $top_net "h5Siaaaaaaaac;2Cw3:CXHuMKIzbMg8FcRtOc6UQkzciWLW5VgYdgOOCP1OGwBaUdTkKXPaCsOr4swwxk0Lw4E8kUvrW1HzfeAaVFsV71PE;feInxiQIcjbEyGFiw40mH;rEUmVzxzj38ac3BuI9ZlNmowE;C4G50oBoUUQ2vBFt4fE0SnwKKxRawM1:doOkLUxT8DxtDuw4tEHzHQmIX5mQOPQN3PaqLvOe77zodjpPSNYohFGXOrP1MJzR2ruGB8tcFDujG5GfKDPGWw71v2EilQ:Kl9KVkABCpGJQlO3yVkmGq1yaeHvcfvHBcnCjQboYHcWlwSyR9SA6SXUB7VpRPWvYOvGU2hboChYns5yGeu181v8y5Si23D:Lb9vuiOALa:akh31KOXVHBSXcK2Cdp:jPq8gPC8gZR3X2MliEhNbHcKaPRBk3;zis92ZktMG0DjM7t3p0uTkLzUIMvY:7GvTxpl:b1NpQriMRQoToMtsqT0ILshvzi7j2jwP2whOHp2aJ2VITPKVQcMli2M1deCEWdnCJHM5yYmyMmY2Mq;84mzl3hOwCXNsaXYXn52gIgWWXtihnZ4xhW6RNur6bjVAaLxCh1hrlZTHIC3DDKQrBAW:FwUVEwMUZsiNc:qSb::3txrzTHFVR:hcbN80wK;o8M9S8Z6;;Ch6279CxDP5:T8L7DL16qKVAeLdpRucLsv3MHehSIuxUa;xftPbyx5gWtOW7mruvAaaSkCRocO;Q2CalUDmnZc;SbU3inHRmJENpCY;eH;3RICZtZkoDrRqsnVDPI72XRYqkkE2dp4l3lKtHHDC8Rb38kvxXKOkXKr6EvJsChRMS8sHh9C;wVX;ptxKRaw1Y6wI6eBfwqcp:GpwfkK8ycfVk5z5FSFscZ23WVA1CbwfYQpcyPvDhT96WsYTpQK;RKD0KBBxjxl:tvfTQek:6bR9oeF:r::TKsNFOJ9H3wmULas2k7ez8cIjwERRh:n30soLp3ML13NW772nNLT8V3:n93hkvi47Rss;YLFrwAT;fs9Rczx5y92MilvEtb7r8nnHLk5Mf1QhPOmrMIza;O0xuzTKXQrKNbYvMMbWwx9Wo4pkJbSUn8bSXo6chZ7z:Hu1mI133KjOQoZHRH8hj6g8xzjFfYNlw55AkcBlHTmB9kX2L8wxT7UZGU7saqzYcBnqDjwf4DtZU;QDEpp9JhGVllq60C9kL80B25zPzYazhXRwPSXmj9EdzFOThZhj;Fd:NjM:GO87nZGzSG;UI9n0ZRwry073zxVzP3psvnx0;legd4iDMUQtOca8Mdu3ZcnYF0TVupAbbrhFN5:30XxIcXIaEqKSa9Sl6ped6lXNLv9j3PisE1Ml82g;2h3d0vbbBO;13l1ac2I6HjwZEB3BAca06ShgMBF7WMdfkawmz;V2Jlf8F73GyjyoKnXVXZ:afYK4r4g:XgbZD:iQcpGlJHt4sbka:BuOpCp0lXV4L:x2gwZrW6HEU0Y:Kj5z2ORKwgHrS07wj3VpTa:x8myBIEq9FzQbPfih5f4H01AinzB9v8Rnw6h:vk4T25nLbAy9gdS7I:przpCd6lXNNN7nrrfUxfyDYjpoJYW:qFNBL;Qc1N37GtAFfwmaFfDTHO:oGTj0Mld:WO7MvREChhaGNo0PCDScCaqY1;5WtrGSjrzAZObVE6ZRzqINfDIPi4WNM14uw3kKuz2hB7a7XNMEr3;u:4sHcYCv5P9e8YIpPSgY0pYf5SpkMeoysYktjY0pN8dAhXAaml7D5uPMwj9K3W9QRMM1svAaEVNiPAEqS5E1ifCtDhoRSg6cssO;tLLv8NlQ95MM3l7NYGkISSVMMwhKE;EXBuNKrG8jkzn8KLjq;rNLByMF6MKw6gVQiIWLBevDZngzqtW0ZFlyIwC0vabn4r7x0QaO5kVZ9nmLM:jNJQodJ36IQ5;qfcYDoFOBF7JtO2Ux0FVNe78xVCCTD0ipDEaDd:6jdi3DpowR5tt0kiVLSeSp0diquecCNLr9FCLiEx0rDBJt7FMGRWXVjAluDDLOolYzRSLAtS;bCK4fnhOjrtr86VczNfNTnZVS:iC3fD13EZd12ovg:jO0fBKi0aF2CKXgs09MY78CMt5zWWMwuzwoosDzkwDDKpL9flGifleiflYiflwkLjITGcsr:fauoJ1d;AgZKtbO;eS8KcqUpZpdKuyat0vfFFBfc3AVXLgfnrNX5sJz6e:h8YC45bmCNOh:cFY:cRerqwciNRe7kQPpYStfPpaoUacCVO4bLuLsDfcZI7GPxjKvvswf2c9pQfOBvlqYRwXHwTZcSBMfuxwfuxwfuxweohyTGqbQVv2IcffyNrvvjR9y:5QE9m3FpRs2VkrXSwOXNlrOXNSHxG8Bpu4MlnTNzOhe6szC2wBbXfu4zW5LiFQCKV4yBg2DHhwHl1iaw1sC4RIkDz0DKW7RByuOujRTnLty05kxd8w6tDzkE8PqDQCKf2AzTvMBNAyAQ6ozt9tzytsEcxBaMTcZxDrNblKco6wJumrK1tDDHHO62v8ql2GqU1G1xmuczAZNuntKdAdJuGPGsZ8eDH3eiOgbtmTCH4FP7A;4MXMpxN6l;;BtuVF6u5AkICe2rUkqOxfhiykkEeoQsUsJlmfnkJn2a:tjcLNg:HPdtcMiILC9xKrqpfAHqjsO;BGl4IMLyHqPvOUijOzkgvAHqbsPyYyAWKG2HjrVcsJAeLwWik0KqvDiqvDiqvDiWYFmtcBCifAXeHsPq4AheJU0AySD2IjD1Y1saFgutE8fKMKVSHFoPmleJ1XdKDyDQadppjGraZBi911AAYybjOC52az5OR8UMyvJuWHtBgPFUUmri6nOumrVObUEJAqHPoDFgkQrP:EBgZyJ1FIR2xPdELy7:40S7Ky8x:4sk::ZoB6;v4NJXLXD:jv244226v8Q;:xVYA;L4p:RJT8Q0B1RVsx:BunfWt5PkHH3WyxSfaZZCMAdP7Vae71HfwVBEzpESuGo7pbnHK3:irRb5TgMFC;uThf;RSNGG3aj7hym7qeSaACJkvCuAKzC8uDIKKE;ipUIYeMO5:kdRBQ7NyKgCw1;f52I9NKtlcxO3WWXyJQCb2YcEsw4h518bVbBhnJofY1NdteEABDHuCYfa1nnmdEMyMBQP9Wi;:GEyzUAx14a2rtDB9QnsZ6dEKJ5JVvpCss4:KIcsYn3kji4eKCtJIdUKFcqL2pCKKOR6lX0jrv156CTdu:tizwME52Gee5S7bOciCQZ4KgzrYRfla55OLMYloi8RojGqbNvGqt5vqaZQCqv1XRcPwzQPS:WhQiKo:wHQ4DO;0xzl;TmzstO;F;4WnXYu:1cKK9T:pTw00OX1:ml8cYDs8:uBf:NpN44W7ON10JmFVFWx7FJGe74BE2W7FU2FUhTStZAOI;fKGvEYLrLvbU;Pl3MlKOVE2HANNFVATMakMVF;DSHMXOeXlbDXTLZeYr:bKYWAdLnqLGan7KVXmXuzuPeSfyDZVPQMpLnPMvQwtfirSEzdrAAv:usKYnYYV3;qJicSLCrLp97OpXGAQ79HKXHtY45SNVrWxTpk:Sg9KncpD7JS2;0oVJhQikLCdi2NE2WY41cquT;tFfmm54p6PJdmc:onItvbUGe7Wvs4Ok8PLkCTHlddOo2P1cAAz8U3kn1qu8oXJqe2GyzDHibRySnX;AWOODbaFn2HgWJ;35fyHx7dB:VZj6BF8eG4oHlpj9:E7hrFLhRF;ma:Kx8;5sg:9SHhNrpPRFBhv76lVCC:UDtTHvjV;Dp0BU0HAFS:pohOuU;6Z162T:jyvxw8qYeChmiijVNLP51a5S631eAWKGeimQisD40gvbMaifKnrvriccTKDhKatgp5p2EfdbuIFrwMnAceSHczZ1WeYF1be2qJibF2IU6G1JcqgkJVnoqADWTYis:sUvwics2uhNlHpsVXI;fCdNilq61qCI1dI6OVTM2yLOuHGX8GlcdwtfE4tj5hSmLCqWs6IlMep2q5MOMjq4rmxwdypo1HbJZIUtzKYnfT6ow9hAUqqU8Nt4ZXghN870l8ODs0PKTNBVZWHTr80myVtQtJB4:WslDxK17E:oHcT:EqDcX0;Nbp7M49;3VX3txY462GbkDN:mbV8Zfx1okyQnLH2z3bwsWVjJMp65wfZ7MSI9KxnxCkAZc8mZrtH6MBfwfroOh2HUkN9YI3;37MfqPU5bSQi1HPjjS;Xs;8QQrQtzWccj7ztSqVr:auxImQCtOz6CfH3O9zcndFVfVOhZF89bi3nabGEFrpQo0nQ8aq6oBFQrDfxxgdX6H93653M2XelqC8nVei6bPrZH6AHgcpS8n1kkY5xC:vtAIB2pf5gNm1aZfpSZZdyIAJXas7QYntf8G82Ihf:Y9E;09Jp4JNIVtxj7tUw6B16UR8t4wVyENSX;rdQFFQ4X:QhTELDY8;G81NVFhDM081Dt0J5:4mXt6RW45XTjVFjPQPqmKUuYK0sGjF;t8vDg3M0ALMkLcOUtvlPQc6nuFGVhByBgNZ3MfZHzFQP94i;Np7AywtBUMsOCd4aCwMmovdGzNcP42Cue6IsBCvEvQFl4FUvWOZxfBGe5uz2lo;lzG69zKFjrsB;PYVe5QlR3Z9Uz95qpfZVIZ:h9HPX;gDuWaa"}
