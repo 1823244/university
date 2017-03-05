@@ -1,0 +1,2 @@
+LIBRARY findAvg
+EXPORTS findAvg

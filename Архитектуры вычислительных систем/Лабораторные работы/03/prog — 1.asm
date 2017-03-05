@@ -1,0 +1,15 @@
+MASM
+MODEL SMALL
+.STACK 256
+.CODE
+main PROC
+	MOV AX, 5h
+	SUB SP, 2
+	MOV BP, SP
+	MOV [BP], BX
+	POP BX
+
+	MOV AX, 4c00h
+	INT 21h
+main ENDP
+END main
