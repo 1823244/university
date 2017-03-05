@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="LZW.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LZW"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FF3C3658">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="183*"/>
+            <RowDefinition Height="146*"/>
+            <RowDefinition Height="146*"/>
+            <RowDefinition Height="293*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" x:Name="Title" Text="LZW" FontSize="120" FontFamily="Segoe UI Light" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="#FFF7E0AE" Margin="555,0,553,0" Height="144" Width="258"/>
+        <Button VerticalAlignment="Top" Width="357" Height="72" Margin="312,38,0,0" Content="Входной файл" x:Name="inputButton" Padding="0,4,0,0" BorderThickness="0" FontSize="39" ScrollViewer.VerticalScrollBarVisibility="Disabled" FontFamily="Segoe UI Light" Grid.Row="1" Click="inputButton_Click"/>
+        <TextBlock x:Name="inputLabel" HorizontalAlignment="Left" Margin="710,57,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="273" Text="Файл не выбран" FontSize="35"/>
+        <Button VerticalAlignment="Top" Width="357" Height="72" Margin="312,36,0,0" Content="Выходной файл" x:Name="outputPicker" Padding="0,4,0,0" BorderThickness="0" FontSize="39" ScrollViewer.VerticalScrollBarVisibility="Disabled" FontFamily="Segoe UI Light" Grid.Row="2" Click="outputPicker_Click"/>
+        <TextBlock x:Name="outputLabel" HorizontalAlignment="Left" Margin="710,55,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="273" Text="Файл не выбран" FontSize="35"/>
+        <Button VerticalAlignment="Top" Width="357" Height="72" Margin="505,115,0,0" Content="Кодировать" x:Name="encode" Padding="0,4,0,0" BorderThickness="0" FontSize="39" ScrollViewer.VerticalScrollBarVisibility="Disabled" FontFamily="Segoe UI Light" Grid.Row="3" Click="encode_Click"/>
+    </Grid>
+</Page>
