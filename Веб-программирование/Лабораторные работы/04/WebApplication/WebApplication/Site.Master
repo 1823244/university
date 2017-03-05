@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" CodeBehind="Site.master.cs" Inherits="WebApplication.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head runat="server">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="~/Styles/Site.css">
+</head>
+<body>
+    <header>
+		<asp:ContentPlaceHolder ID="HeaderContent" runat="server"/>
+	</header>
+    <main>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+    </main>
+    <footer>
+		<p>Игорь Адаменко</p>
+	</footer>
+</body>
+</html>
