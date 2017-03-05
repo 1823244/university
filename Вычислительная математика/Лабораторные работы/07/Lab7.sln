@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab7", "Lab7\Lab7.csproj", "{BD648E90-AA49-42D5-BE3A-DA048919C6CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD648E90-AA49-42D5-BE3A-DA048919C6CD}.Debug|x86.ActiveCfg = Debug|x86
+		{BD648E90-AA49-42D5-BE3A-DA048919C6CD}.Debug|x86.Build.0 = Debug|x86
+		{BD648E90-AA49-42D5-BE3A-DA048919C6CD}.Release|x86.ActiveCfg = Release|x86
+		{BD648E90-AA49-42D5-BE3A-DA048919C6CD}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Lab7\Lab7.csproj
+	EndGlobalSection
+EndGlobal
