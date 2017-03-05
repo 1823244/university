@@ -1,0 +1,245 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Name="ComputerInfo" x:Class="Program.MainWindow"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="Информация о компьютере" Height="400" Width="777">
+    <Grid>
+        <TabControl HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
+            <TabItem x:Name="mainTab" Header="Общая информация">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid
+						AutoGenerateColumns="False"
+						x:Name="mainGrid"
+						HorizontalAlignment="Stretch"
+						VerticalAlignment="Stretch"
+						Height="Auto"
+						Width="Auto"
+						CanUserReorderColumns="False"
+						CanUserResizeColumns="False"
+						CanUserSortColumns="False"
+						SelectionMode="Single"
+						CanUserResizeRows="False"
+						BorderThickness="0"
+						Focusable="False"
+						RowDetailsVisibilityMode="Collapsed"
+						IsReadOnly="True"
+						HeadersVisibility="Column"
+						GridLinesVisibility="None">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Name}"  x:Name="nameMainColumn" CanUserResize="False" IsReadOnly="True" Header="Характеристика" Width="50*"/>
+                            <DataGridTextColumn Binding="{Binding Value}" x:Name="valueMainColumn" CanUserResize="False" Width="50*" IsReadOnly="True" Header="Значение"/>
+                        </DataGrid.Columns>
+                        <DataGrid.CellStyle>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Setter Property="BorderBrush" Value="Beige"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="Padding" Value="10,5"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                            <Border Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                                <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </DataGrid.CellStyle>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="systemTab" Header="Системные метрики">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid
+						AutoGenerateColumns="False"
+						x:Name="systemGrid"
+						HorizontalAlignment="Stretch"
+						VerticalAlignment="Stretch"
+						Height="Auto"
+						Width="Auto"
+						CanUserReorderColumns="False"
+						CanUserResizeColumns="False"
+						CanUserSortColumns="False"
+						SelectionMode="Single"
+						CanUserResizeRows="False"
+						BorderThickness="0"
+						Focusable="False"
+						RowDetailsVisibilityMode="Collapsed"
+						IsReadOnly="True"
+						HeadersVisibility="Column"
+						GridLinesVisibility="None">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Name}"  x:Name="nameSystemColumn" CanUserResize="False" IsReadOnly="True" Header="Характеристика" Width="50*"/>
+                            <DataGridTextColumn Binding="{Binding Value}" x:Name="valueSystemColumn" CanUserResize="False" Width="50*" IsReadOnly="True" Header="Значение"/>
+                        </DataGrid.Columns>
+                        <DataGrid.CellStyle>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Setter Property="BorderBrush" Value="Beige"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="Padding" Value="10,5"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                            <Border Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                                <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </DataGrid.CellStyle>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="parametersTab" Header="Системные параметры">
+                <ScrollViewer Background="#FFF0F0F0">
+                    <Grid>
+                        <DataGrid
+							AutoGenerateColumns="False"
+							x:Name="parametersGrid"
+							HorizontalAlignment="Stretch"
+							VerticalAlignment="Stretch"
+							Width="Auto"
+							CanUserReorderColumns="False"
+							CanUserResizeColumns="False"
+							CanUserSortColumns="False"
+							SelectionMode="Single"
+							CanUserResizeRows="False"
+							BorderThickness="0"
+							Focusable="False"
+							RowDetailsVisibilityMode="Collapsed"
+							IsReadOnly="True"
+							HeadersVisibility="Column"
+							GridLinesVisibility="None" Margin="0,0,0,400">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Name}"  x:Name="nameParametersColumn" CanUserResize="False" IsReadOnly="True" Header="Характеристика" Width="50*"/>
+                                <DataGridTextColumn Binding="{Binding Value}" x:Name="valueParametersColumn" CanUserResize="False" Width="50*" IsReadOnly="True" Header="Значение"/>
+                            </DataGrid.Columns>
+                            <DataGrid.CellStyle>
+                                <Style TargetType="{x:Type DataGridCell}">
+                                    <Setter Property="BorderBrush" Value="Beige"/>
+                                    <Setter Property="BorderThickness" Value="1"/>
+                                    <Setter Property="FontSize" Value="15"/>
+                                    <Setter Property="Padding" Value="10,5"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                                <Border Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                                    <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </DataGrid.CellStyle>
+                        </DataGrid>
+                        <CheckBox x:Name="enableFilter" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" FontSize="15" Checked="enableFilter_Checked" Unchecked="enableFilter_Unchecked">
+                            <TextBlock Text="Включить фильтрацию ввода" Margin="0,-2,0,0" FontWeight="SemiBold" />
+                        </CheckBox>
+                        <Button Content="Сбросить" FontSize="15" Margin="623,128,33,0" Click="Button_Click" Height="27" VerticalAlignment="Top" />
+                        <GroupBox x:Name="GroupFilter" Header="Параметры фильтра" HorizontalAlignment="Left" Margin="32,160,0,0" VerticalAlignment="Top" Width="681" Height="201" FontSize="15" IsEnabled="False" BorderBrush="#FF787878" >
+                            <Grid>
+                                <TextBlock Text="Сколько времени следует удерживать клавишу до того, как компьютер будет считать её нажатой?" HorizontalAlignment="Left" Margin="20,14,0,0" VerticalAlignment="Top" FontSize="15" MaxWidth="450" TextWrapping="Wrap"/>
+                                <ComboBox x:Name="iWaitMSecFilter" HorizontalAlignment="Left" Margin="480,14,0,0" VerticalAlignment="Top" Width="70" Height="25" SelectionChanged="iWaitMSecFilter_SelectionChanged" SelectedValuePath="Content">
+                                    <ComboBoxItem Content="0,0 с"/>
+                                    <ComboBoxItem Content="0,3 с"/>
+                                    <ComboBoxItem Content="0,5 с"/>
+                                    <ComboBoxItem Content="0,7 с"/>
+                                    <ComboBoxItem Content="1,0 с"/>
+                                    <ComboBoxItem Content="1,4 с"/>
+                                    <ComboBoxItem Content="2,0 с"/>
+                                    <ComboBoxItem Content="5,0 с"/>
+                                    <ComboBoxItem Content="10,0 с"/>
+                                    <ComboBoxItem Content="20,0 с"/>
+                                </ComboBox>
+
+                                <TextBlock Text="Сколько времени должно пройти до того, как клавиша будет считаться нажатой впервые?" HorizontalAlignment="Left" Margin="20,69,0,0" VerticalAlignment="Top" FontSize="15" MaxWidth="400" TextWrapping="Wrap"/>
+                                <ComboBox x:Name="iDelayMSecFilter" HorizontalAlignment="Left" Margin="480,69,0,0" VerticalAlignment="Top" Width="70" Height="25" SelectionChanged="iDelayMSecFilter_SelectionChanged" SelectedValuePath="Content">
+                                    <ComboBoxItem Content="0,3 с"/>
+                                    <ComboBoxItem Content="0,5 с"/>
+                                    <ComboBoxItem Content="0,7 с"/>
+                                    <ComboBoxItem Content="1,0 с"/>
+                                    <ComboBoxItem Content="1,5 с"/>
+                                    <ComboBoxItem Content="2,0 с"/>
+                                </ComboBox>
+
+                                <TextBlock Text="Сколько времени должно пройти для распознавания последующих повторных нажатий?" HorizontalAlignment="Left" Margin="20,124,0,0" VerticalAlignment="Top" FontSize="15" MaxWidth="400" TextWrapping="Wrap"/>
+                                <ComboBox x:Name="iRepeatMSecFilter" HorizontalAlignment="Left" Margin="480,124,0,0" VerticalAlignment="Top" Width="70" Height="25" SelectionChanged="iRepeatMSecFilter_SelectionChanged" SelectedValuePath="Content">
+                                    <ComboBoxItem Content="0,3 с"/>
+                                    <ComboBoxItem Content="0,5 с"/>
+                                    <ComboBoxItem Content="0,7 с"/>
+                                    <ComboBoxItem Content="1,0 с"/>
+                                    <ComboBoxItem Content="1,5 с"/>
+                                    <ComboBoxItem Content="2,0 с"/>
+                                </ComboBox>
+                            </Grid>
+                        </GroupBox>
+                        <CheckBox x:Name="enableMinimized" HorizontalAlignment="Left" Margin="10,396,0,0" VerticalAlignment="Top" FontSize="15" Checked="enableMinimized_Checked" Unchecked="enableMinimized_Unchecked">
+                            <TextBlock Text="Скрывать свёрнутые окна" Margin="0,-2,0,0" FontWeight="SemiBold" />
+                        </CheckBox>
+                        <Button x:Name="HideReset" Content="Сбросить" FontSize="15" Margin="623,389,33,0" Height="27" VerticalAlignment="Top" Click="HideReset_Click" />
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem x:Name="colorsTab" Header="Системные цвета">
+                <ScrollViewer Background="#FFF0F0F0">
+                    <Grid>
+                        <Label Content="Цвет тёмной тени для трехмерных элементов отображения" HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="15" VerticalAlignment="Top"/>
+                        <xctk:ColorPicker x:Name="shadowColor" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Margin="536,17,0,0" SelectedColorChanged="shadowColor_SelectedColorChanged"  AvailableColorsHeader="Доступные цвета" RecentColorsHeader="Недавно использованные" StandardColorsHeader="Стандартные цвета" UsingAlphaChannel="False" />
+                        <Label Content="Цвет текста на командных кнопках" HorizontalAlignment="Left" Margin="10,54,0,0" FontSize="15" VerticalAlignment="Top"/>
+                        <xctk:ColorPicker x:Name="commandKeysColor" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Margin="536,61,0,0"  SelectedColorChanged="commandKeysColor_SelectedColorChanged"  AvailableColorsHeader="Доступные цвета" RecentColorsHeader="Недавно использованные" StandardColorsHeader="Стандартные цвета" UsingAlphaChannel="False" />
+                        <Label Content="Цвет заголовка активного окна" HorizontalAlignment="Left" Margin="10,98,0,0" FontSize="15" VerticalAlignment="Top"/>
+                        <xctk:ColorPicker x:Name="captionColor" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Margin="536,105,0,0" AvailableColorsHeader="Доступные цвета" RecentColorsHeader="Недавно использованные" StandardColorsHeader="Стандартные цвета" UsingAlphaChannel="False" SelectedColorChanged="captionColor_SelectedColorChanged" />
+                        <Button Content="Сбросить" HorizontalAlignment="Left" Margin="651,149,0,0" VerticalAlignment="Top" FontSize="15" Width="85" Height="25" Click="Button_Click_1"/>
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem x:Name="timeTab" Header="Время">
+                <ScrollViewer Background="#FFF0F0F0">
+                    <Grid>
+                        <Label x:Name="currentTime" HorizontalAlignment="Left" FontSize="15" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="biasTime" HorizontalAlignment="Left" FontSize="15" Margin="10,40,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="summerTime" HorizontalAlignment="Left" FontSize="15" Margin="10,70,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="winterTime" HorizontalAlignment="Left" FontSize="15" Margin="10,100,0,0" VerticalAlignment="Top"/>
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem x:Name="additionalTab" Header="Дополнительно">
+                <ScrollViewer Background="#FFF0F0F0">
+                    <Grid>
+                        <Label Content="Переключение активной раскладки клавиатуры:" HorizontalAlignment="Left" FontSize="15" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                        <Button Content="Предыдущая" HorizontalAlignment="Left" Margin="360,13,0,0" VerticalAlignment="Top" Height="27" FontSize="15" Width="111" Click="Button_Click_2"/>
+                        <Button Content="Следующая" HorizontalAlignment="Left" Margin="476,13,0,0" VerticalAlignment="Top" Height="27" FontSize="15" Width="111" Click="Button_Click_3"/>
+                        <Separator Height="23" Margin="0,45,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Форматирование числа:" HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="10,73,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Число:" HorizontalAlignment="Left" FontSize="15" Margin="40,100,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="number" HorizontalAlignment="Left" Height="25" Margin="101,104,0,0" TextWrapping="Wrap" Text="123.45" FontSize="15" VerticalAlignment="Top" Width="120" KeyUp="number_KeyUp"/>
+                        <Label Content="Количество знаков после запятой:" HorizontalAlignment="Left" FontSize="15" Margin="250,100,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="digits" HorizontalAlignment="Left" Height="25" Margin="502,104,0,0" TextWrapping="Wrap" Text="2" FontSize="15" VerticalAlignment="Top" Width="40" KeyUp="number_KeyUp"/>
+                        <Label Content="Количество цифр в группе:" HorizontalAlignment="Left" FontSize="15" Margin="250,135,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="grouping" HorizontalAlignment="Left" Height="25" Margin="502,139,0,0" TextWrapping="Wrap" Text="3" FontSize="15" VerticalAlignment="Top" Width="40" KeyUp="number_KeyUp"/>
+                        <Label Content="Разделитель дробной части:" HorizontalAlignment="Left" FontSize="15" Margin="250,170,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="decimalsep" HorizontalAlignment="Left" Height="25" Margin="502,174,0,0" TextWrapping="Wrap" Text="." FontSize="15" VerticalAlignment="Top" Width="40" MaxLength="1" KeyUp="decimalsep_KeyUp"/>
+                        <Label Content="Разделитель групп:" HorizontalAlignment="Left" FontSize="15" Margin="250,205,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="thousandsep" HorizontalAlignment="Left" Height="25" Margin="502,209,0,0" TextWrapping="Wrap" Text=" " FontSize="15" VerticalAlignment="Top" Width="40" MaxLength="1" KeyUp="decimalsep_KeyUp"/>
+                        <Label Content="Результат:" HorizontalAlignment="Left" FontSize="15" Margin="250,240,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="resultNumber" FontWeight="Bold" HorizontalAlignment="Left" FontSize="15" Margin="502,240,0,0" VerticalAlignment="Top"/>
+                        <Separator Height="23" Margin="0,270,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Код последней ошибки:" HorizontalAlignment="Left" FontSize="15" Margin="10,293,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="errorCode" FontWeight="Bold" HorizontalAlignment="Left" FontSize="15" Margin="190,293,0,0" VerticalAlignment="Top"/>
+                        <Separator Height="23" Margin="0,323,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Введите строку:" HorizontalAlignment="Left" FontSize="15" Margin="10,346,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Строка в OEM-кодировке:" HorizontalAlignment="Left" FontSize="15" Margin="10,376,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Строка в текущей кодировке:" HorizontalAlignment="Left" FontSize="15" Margin="10,406,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="toOEM" HorizontalAlignment="Left" Height="25" Margin="247,350,0,0" TextWrapping="Wrap" FontSize="15" VerticalAlignment="Top" Width="250" KeyUp="toOEM_KeyUp"/>
+                        <Label x:Name="inOEM" HorizontalAlignment="Left" FontSize="15" Margin="242,378,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="fromOEM" HorizontalAlignment="Left" FontSize="15" Margin="242,408,0,0" VerticalAlignment="Top"/>
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
