@@ -1,0 +1,23 @@
+{
+  "name": "lab3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "selenium-standalone install",
+    "pretest": "rm -rf allure-results",
+    "test": "wdio wdio.conf.js",
+    "report": "allure report generate -o allure-report allure-results && static ./allure-report/ -p 8082"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "allure-commandline": "1.4.22-1",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.4",
+    "selenium-standalone": "^4.8.0",
+    "wdio-allure-reporter": "0.0.2",
+    "wdio-mocha-framework": "^0.2.4",
+    "webdriverio": "^4.0.3"
+  }
+}

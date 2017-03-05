@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>App</title>
+	<link rel="stylesheet" href="awsm.min.css">
+</head>
+<body>
+	<header>
+		<h1>Lab 3</h1>
+	</header>
+	<main>
+		<form>
+			<h2>Mars vacation program</h4>
+			<fieldset>
+				<legend>Be first</legend>
+				<label for="first-name">First Name</label>
+				<input type="text" class="first-name" id="first-name" name="first-name" required>
+				<label for="last-name">Last Name</label>
+				<input type="text" class="last-name" id="last-name" name="last-name" required>
+				<label for="date">Date of birth</label>
+				<input id="date" class="date" type="date" name="date" required>
+				<label for="country">Country</label>
+				<select id="country" name="country" class="country" required>
+					<option value="china">China</option>
+					<option value="russia">Russia</option>
+					<option value="usa">USA</option>
+				</select>
+				<label for="zip" class="zip">ZIP Code</label>
+				<input type="text" id="zip" class="zip" name="zip">
+				<label for="putin" class="putin">Do you love Putin?</label>
+				<div class="putin">
+					<input type="radio" id="putin" class="putin" name="putin[]" value="love"> I love Putin!
+				</div>
+				<label class="tea">Choose a tea you like</label>
+				<div class="tea">
+					<input type="checkbox" class="tea" name="tea[]" value="white"> White
+					<input type="checkbox" class="tea" name="tea[]" value="green"> Green
+					<input type="checkbox" class="tea" name="tea[]" value="oolong"> Oolong
+					<input type="checkbox" class="tea" name="tea[]" value="black"> Black
+					<input type="checkbox" class="tea" name="tea[]" value="pu erh"> Pu erh
+				</div>
+				<label for="about">Tell us about yourself</label>
+				<textarea id="about" name="about" class="about"></textarea>
+				<label for="photo">Photo</label>
+				<input id="photo" type="file" name="file" class="photo" required>
+				<input type="submit" value="Submit" name="submit" class="submit">
+				<button type="reset">Reset</button>
+				<output style="display: none" id="welcome">
+					<p>Welcome on board!</p>
+				</output>
+			</fieldset>
+		</form>
+		<table id="table">
+			<thead>
+				<tr>
+					<th class="first-name">First Name</th>
+					<th class="last-name">Last Name</th>
+					<th class="date">Date</th>
+					<th class="country">Country</th>
+					<th class="putin">Putin</th>
+					<th class="zip">ZIP</th>
+					<th class="tea">Tea</th>
+					<th class="about">About</th>
+					<th class="photo">Photo</th>
+					<th class="submit">Submit</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr style="display: none" id="result">
+					<td class="first-name"></td>
+					<td class="last-name"></td>
+					<td class="date"></td>
+					<td class="country"></td>
+					<td class="putin"></td>
+					<td class="zip"></td>
+					<td class="tea"></td>
+					<td class="about"></td>
+					<td class="photo"></td>
+					<td class="submit"></td>
+				</tr>
+			</tbody>
+		</table>
+	</main>
+
+	<script>
+		var map = {
+				'russia': 'putin',
+				'china': 'tea',
+				'usa': 'zip'
+			},
+			applicants = [],
+			countrySelect = document.getElementById('country'),
+			form = document.getElementsByTagName('form')[0];
+
+		countrySelect.addEventListener('change', function() {
+			hideAndCleanAllChoices();
+
+			var els = document.querySelectorAll('.' + map[this.value]);
+
+			showElements(els);
+		});
+
+		form.addEventListener('submit', function(event) {
+			event.preventDefault();
+
+			document.getElementById('welcome').style.display = '';
+
+			applicants.push(formToObject(this));
+
+			var obj = formToObject(this);
+
+			for (var o in obj) {
+				document.querySelector('td.' + o).innerHTML = obj[o];
+			}
+
+			// document.querySelector('tbody tr').style.display = 'block';
+		});
+
+		function hideAndCleanAllChoices() {
+			var choices = Object.keys(map)
+				.map(function(k) { return '.' + map[k]; }).join(',');
+			var els = document.querySelectorAll(choices);
+
+			hideElements(els);
+			clearElements(els);
+		};
+
+		function hideElements(els) {
+			for (var i = els.length - 1; i >= 0; i--) {
+				els[i].style.display = 'none';
+			}
+		}
+
+		function showElements(els) {
+			for (var i = els.length - 1; i >= 0; i--) {
+				els[i].style.display = '';
+			}
+		}
+
+		function clearElements(els) {
+			for (var i = els.length - 1; i >= 0; i--) {
+				if (els[i].tagName.toLowerCase() == 'input') {
+					if (els[i].type == 'text') {
+						els[i].value = '';
+					} else {
+						els[i].checked = false;
+					}
+				}
+			}
+		}
+
+		function formToObject(form) {
+			var data = {},
+				inputs = form.querySelectorAll('input, select, textarea');
+
+			for (var i = inputs.length - 1; i >= 0; i--) {
+				var input = inputs[i];
+
+				if (input.name.indexOf('[') > -1) {
+					if (typeof data[input.name] == 'object') {
+						data[input.className][input.value] = input.checked;
+					} else {
+						data[input.className] = {};
+						data[input.className][input.value] = input.checked;
+					}
+				} else {
+					data[input.className] = input.value;
+				}
+			}
+
+			return data;
+		}
+
+		hideAndCleanAllChoices();
+		showElements(document.querySelectorAll('.' + map[countrySelect.value]));
+	</script>
+</body>
+</html>
