@@ -1,0 +1,198 @@
+﻿<Page
+    x:Class="Pentomino.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Pentomino"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Width="160" Height="80" Canvas.ZIndex="1" ManipulationCompleted="Object_ManipulationCompleted" ManipulationDelta="Object_ManipulationDelta" x:Name="N" ManipulationMode="All" Margin="355,183,849,503" RightTapped="RightTap_Rotate" ManipulationStarted="Object_ManipulationStarted">
+            <Border Background="#FFABEDAB" Width="40" Height="40" Margin="120,0,0,40" BorderThickness="1,1,1,1" BorderBrush="#FF7EBD7E"/>
+            <Border Background="#FFABEDAB" Width="40" Height="40" Margin="80,0,40,40" BorderThickness="1,1,1,1" BorderBrush="#FF7EBD7E"/>
+            <Border Background="#FFABEDAB" Width="40" Height="40" Margin="80,40,40,0" BorderThickness="1,1,1,1" BorderBrush="#FF7EBD7E"/>
+            <Border Background="#FFABEDAB" Width="40" Height="40" Margin="40,40,80,0" BorderThickness="1,1,1,1" BorderBrush="#FF7EBD7E"/>
+            <Border Background="#FFABEDAB" Width="40" Height="40" Margin="0,40,120,0" BorderThickness="1,1,1,1" BorderBrush="#FF7EBD7E"/>
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid x:Name="F" Width="120" Height="120" Canvas.ZIndex="1" ManipulationDelta="Object_ManipulationDelta" ManipulationMode="All" RightTapped="RightTap_Rotate" ManipulationCompleted="Object_ManipulationCompleted" ManipulationStarted="Object_ManipulationStarted" Margin="356,297,890,351">
+            <Border Background="#FFDBBA9A" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFAD8C6D" Margin="80,0,0,80"/>
+            <Border Background="#FFDBBA9A" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFAD8C6D" Margin="40,0,40,80"/>
+            <Border Background="#FFDBBA9A" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFAD8C6D"/>
+            <Border Background="#FFDBBA9A" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFAD8C6D" Margin="0,40,80,40"/>
+            <Border Background="#FFDBBA9A" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFAD8C6D" Margin="40,80,40,0"/>
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid x:Name="I" Width="40" Height="200" Canvas.ZIndex="1" ManipulationDelta="Object_ManipulationDelta" ManipulationMode="All" RightTapped="RightTap_Rotate" ManipulationCompleted="Object_ManipulationCompleted" ManipulationStarted="Object_ManipulationStarted" Margin="268,184,1058,384">
+            <Border Background="#FFEDABAB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFBF7E7E" Margin="0,0,0,160"/>
+            <Border Background="#FFEDABAB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFBF7E7E" Margin="0,40,0,120"/>
+            <Border Background="#FFEDABAB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFBF7E7E"/>
+            <Border Background="#FFEDABAB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFBF7E7E" Margin="0,120,0,40"/>
+            <Border Background="#FFEDABAB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFBF7E7E" Margin="0,160,0,0"/>
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid x:Name="L" Width="80" Height="160" Canvas.ZIndex="1" ManipulationDelta="Object_ManipulationDelta" ManipulationMode="All" RightTapped="RightTap_Rotate" ManipulationCompleted="Object_ManipulationCompleted" ManipulationStarted="Object_ManipulationStarted" Margin="268,450,1018,158">
+            <Border Background="#FFCCCC89" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF9E9E5C" Margin="0,0,40,120"/>
+            <Border Background="#FFCCCC89" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF9E9E5C" Margin="0,40,40,80"/>
+            <Border Background="#FFCCCC89" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF9E9E5C" Margin="0,80,40,40"/>
+            <Border Background="#FFCCCC89" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF9E9E5C" Margin="0,120,40,0"/>
+            <Border Background="#FFCCCC89" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF9E9E5C" Margin="40,120,0,0"/>
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid x:Name="P" Width="80" Height="120" Canvas.ZIndex="1" ManipulationDelta="Object_ManipulationDelta" ManipulationMode="All" RightTapped="RightTap_Rotate" ManipulationCompleted="Object_ManipulationCompleted" ManipulationStarted="Object_ManipulationStarted" Margin="396,450,890,198">
+            <Border Background="#FFBADB9A" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF8CAB6D" Margin="0,0,40,80"/>
+            <Border Background="#FFBADB9A" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF8CAB6D" Margin="40,0,0,80"/>
+            <Border Background="#FFBADB9A" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF8CAB6D" Margin="0,40,40,40"/>
+            <Border Background="#FFBADB9A" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF8CAB6D" Margin="40,40,0,40"/>
+            <Border Background="#FFBADB9A" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF8CAB6D" Margin="0,80,40,0"/>
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid x:Name="T" Width="120" Height="120" Canvas.ZIndex="1" ManipulationDelta="Object_ManipulationDelta" ManipulationMode="All" RightTapped="RightTap_Rotate" ManipulationCompleted="Object_ManipulationCompleted" ManipulationStarted="Object_ManipulationStarted" Margin="852,184,394,464">
+            <Border Background="#FF9ADBBA" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF6DAB8A" Margin="0,0,80,80"/>
+            <Border Background="#FF9ADBBA" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF6DAB8A" Margin="40,0,40,80"/>
+            <Border Background="#FF9ADBBA" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF6DAB8A" Margin="80,0,0,80"/>
+            <Border Background="#FF9ADBBA" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF6DAB8A"/>
+            <Border Background="#FF9ADBBA" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF6DAB8A" Margin="40,80,40,0"/>
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid x:Name="U" Width="120" Height="80" Canvas.ZIndex="1" ManipulationDelta="Object_ManipulationDelta" ManipulationMode="All" RightTapped="RightTap_Rotate" ManipulationCompleted="Object_ManipulationCompleted" ManipulationStarted="Object_ManipulationStarted" Margin="852,337,394,351">
+            <Border Background="#FF89CCCC" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF5F9E9E" Margin="0,0,80,40"/>
+            <Border Background="#FF89CCCC" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF5F9E9E" Margin="0,40,80,0"/>
+            <Border Background="#FF89CCCC" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF5F9E9E" Margin="40,40,40,0"/>
+            <Border Background="#FF89CCCC" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF5F9E9E" Margin="80,40,0,0"/>
+            <Border Background="#FF89CCCC" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF5F9E9E" Margin="80,0,0,40"/>
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid x:Name="V" Width="120" Height="120" Canvas.ZIndex="1" ManipulationDelta="Object_ManipulationDelta" ManipulationMode="All" RightTapped="RightTap_Rotate" ManipulationCompleted="Object_ManipulationCompleted" ManipulationStarted="Object_ManipulationStarted" Margin="852,450,394,198">
+            <Border Background="#FF9ABADB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF6D8CAB" Margin="0,0,80,80"/>
+            <Border Background="#FF9ABADB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF6D8CAB" Margin="0,40,80,40"/>
+            <Border Background="#FF9ABADB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF6D8CAB" Margin="0,80,80,0"/>
+            <Border Background="#FF9ABADB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF6D8CAB" Margin="40,80,40,0"/>
+            <Border Background="#FF9ABADB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF6D8CAB" Margin="80,80,0,0"/>
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid x:Name="W" Width="120" Height="120" Canvas.ZIndex="1" ManipulationDelta="Object_ManipulationDelta" ManipulationMode="All" RightTapped="RightTap_Rotate" ManipulationCompleted="Object_ManipulationCompleted" ManipulationStarted="Object_ManipulationStarted" Margin="1017,184,229,464">
+            <Border Background="#FFABABED" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF7E7EBD" Margin="0,0,80,80"/>
+            <Border Background="#FFABABED" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF7E7EBD" Margin="0,40,80,40"/>
+            <Border Background="#FFABABED" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF7E7EBD"/>
+            <Border Background="#FFABABED" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF7E7EBD" Margin="40,80,40,0"/>
+            <Border Background="#FFABABED" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF7E7EBD" Margin="80,80,0,0"/>
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid x:Name="X" Width="120" Height="120" Canvas.ZIndex="1" ManipulationDelta="Object_ManipulationDelta" ManipulationMode="All" RightTapped="RightTap_Rotate" ManipulationCompleted="Object_ManipulationCompleted" ManipulationStarted="Object_ManipulationStarted" Margin="1017,337,229,311">
+            <Border Background="#FFBA9ADB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF8A6DAB" Margin="0,40,80,40"/>
+            <Border Background="#FFBA9ADB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF8A6DAB" Margin="40,0,40,80"/>
+            <Border Background="#FFBA9ADB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF8A6DAB" Margin="80,40,0,40"/>
+            <Border Background="#FFBA9ADB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF8A6DAB" Margin="40,80,40,0"/>
+            <Border Background="#FFBA9ADB" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF8A6DAB"/>
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid x:Name="Y" Width="160" Height="80" Canvas.ZIndex="1" ManipulationDelta="Object_ManipulationDelta" ManipulationMode="All" RightTapped="RightTap_Rotate" ManipulationCompleted="Object_ManipulationCompleted" ManipulationStarted="Object_ManipulationStarted" Margin="1017,490,189,198">
+            <Border Background="#FFCC89CC" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF9E5F9E" Margin="80,0,40,40"/>
+            <Border Background="#FFCC89CC" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF9E5F9E" Margin="0,40,120,0"/>
+            <Border Background="#FFCC89CC" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF9E5F9E" Margin="40,40,80,0"/>
+            <Border Background="#FFCC89CC" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF9E5F9E" Margin="80,40,40,0"/>
+            <Border Background="#FFCC89CC" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FF9E5F9E" Margin="120,40,0,0"/>
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid x:Name="Z" Width="120" Height="120" Canvas.ZIndex="1" ManipulationDelta="Object_ManipulationDelta" ManipulationMode="All" RightTapped="RightTap_Rotate" ManipulationCompleted="Object_ManipulationCompleted" ManipulationStarted="Object_ManipulationStarted" Margin="643,638,603,10">
+            <Border Background="#FFDB9ABA" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFAB6D8A" Margin="0,0,80,80"/>
+            <Border Background="#FFDB9ABA" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFAB6D8A" Margin="40,0,40,80"/>
+            <Border Background="#FFDB9ABA" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFAB6D8A"/>
+            <Border Background="#FFDB9ABA" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFAB6D8A" Margin="40,80,40,0"/>
+            <Border Background="#FFDB9ABA" Width="40" Height="40" BorderThickness="1,1,1,1" BorderBrush="#FFAB6D8A" Margin="80,80,0,0"/>
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid x:Name="Field" Width="242" Height="402" Canvas.ZIndex="1" Background="#FF1B1B1B">
+            <Border Background="Black" Width="40" Margin="1,1,201,361" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="1,41,201,321" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Height="40" Margin="41,1,161,361" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Height="40" Margin="81,1,121,361" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Height="40" Margin="121,1,81,361" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Height="40" Margin="161,1,41,361" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Height="40" Margin="201,1,1,361" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="41,41,161,321" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="81,41,121,321" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="121,41,81,321" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="161,41,41,321" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="201,41,1,321" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="1,81,201,281" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="41,81,161,281" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="81,81,121,281" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="121,81,81,281" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="161,81,41,281" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="201,81,1,281" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="201,121,1,241" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="161,121,41,241" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="121,121,81,241" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="81,121,121,241" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="41,121,161,241" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="1,121,201,241" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="1,161,201,201" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="41,161,161,201" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="81,161,121,201" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="121,161,81,201" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="161,161,41,201" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="201,161,1,201" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="201,201,1,161" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="161,201,41,161" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="121,201,81,161" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="81,201,121,161" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="41,201,161,161" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="1,201,201,161" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="1,241,201,121" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="41,241,161,121" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="81,241,121,121" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="121,241,81,121" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="161,241,41,121" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="201,241,1,121" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="201,281,1,81" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="161,281,41,81" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="121,281,81,81" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="81,281,121,81" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="41,281,161,81" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="1,281,201,81" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="1,321,201,41" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="41,321,161,41" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="81,321,121,41" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="121,321,81,41" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="161,321,41,41" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="201,321,1,41" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="201,361,1,1" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="161,361,41,1" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="121,361,81,1" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="81,361,121,1" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="41,361,161,1" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+            <Border Background="Black" Width="40" Margin="1,361,201,1" BorderThickness="1,1,0,0" BorderBrush="#FF1B1B1B"/>
+        </Grid>
+        <TextBlock x:Name="Tester" Visibility="Visible" HorizontalAlignment="Left" Margin="1155,184,0,0" TextWrapping="Wrap" Text="Debug Information" VerticalAlignment="Top" Height="401" Width="211"/>
+        <Button x:Name="Reset" Content="Reset" HorizontalAlignment="Left" Margin="640,76,0,0" VerticalAlignment="Top" Click="ResetPage" Width="88"/>
+        <Button x:Name="FindSolution" Content="Solve it!" HorizontalAlignment="Left" Margin="640,126,0,0" VerticalAlignment="Top" Click="FindOneSolution" Width="88"/>
+    </Grid>
+</Page>
