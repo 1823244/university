@@ -1,0 +1,16 @@
+﻿<Window x:Class="Program.SectionsList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Залы" Height="300" Width="500" Closing="Window_Closing">
+    <Grid>
+        <DataGrid x:Name="sectionGrid"
+                  SelectionMode="Single"
+                  AutoGeneratingColumn="sectionGrid_AutoGeneratingColumn"
+                  MouseDoubleClick="sectionGrid_MouseDoubleClick"/>
+        <Button x:Name="AddSection"
+                Content="Добавить зал"
+                Style="{StaticResource ResourceKey=Add}"
+                Click="AddSection_Click"
+                />
+    </Grid>
+</Window>

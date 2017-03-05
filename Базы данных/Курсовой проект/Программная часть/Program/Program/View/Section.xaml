@@ -1,0 +1,35 @@
+﻿<Window x:Class="Program.SectionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Зал" Height="190" Width="300" ResizeMode="CanMinimize" Closing="Window_Closing">
+    <Grid>
+        <Label Content="Название: " Margin="10,10,0,0"/>
+        <TextBox x:Name="Title" Margin="93,12,0,0" Width="180"/>
+        <Label Content="Место: " Margin="10,40,0,0"/>
+        <TextBox x:Name="Location" Margin="93,42,0,0" Width="180"/>
+        <Label x:Name="IDLabel" Content="ИД: " Margin="10,80,0,0"/>
+        <Label x:Name="ID" Margin="42,80,0,0"/>
+        <Button x:Name="Delete"
+                Content="Удалить"
+                Style="{StaticResource ResourceKey=SetLang}"
+                Height="27"
+                Width="80"
+                Margin="193,80,0,0" Click="Delete_Click" />
+        <Button x:Name="Complete" Content="Готово" Click="Complete_Click">
+            <Button.Style>
+                <Style BasedOn="{StaticResource ResourceKey=Add}" TargetType="{x:Type Button}">
+                    <Setter Property="IsEnabled" Value="False" />
+                    <Style.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=Title, Path=(Validation.HasError)}" Value="False" />
+                                <Condition Binding="{Binding ElementName=Location, Path=(Validation.HasError)}" Value="False" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="IsEnabled" Value="True" />
+                        </MultiDataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>

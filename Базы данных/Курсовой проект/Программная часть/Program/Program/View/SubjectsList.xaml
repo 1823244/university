@@ -1,0 +1,15 @@
+﻿<Window x:Class="Program.SubjectsList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Жанры" Height="300" Width="470" Closing="Window_Closing">
+    <Grid>
+        <DataGrid x:Name="subjectGrid"
+                  AutoGeneratingColumn="subjectGrid_AutoGeneratingColumn"
+                  MouseDoubleClick="subjectGrid_MouseDoubleClick"
+                  SelectionMode="Single"/>
+        <Button x:Name="AddSubject"
+                            Content="Добавить жанр"
+                            Style="{StaticResource ResourceKey=Add}"
+                            Click="AddSubject_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,63 @@
+﻿<Window x:Class="Program.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Работа с базой данных" Height="400" Width="777" Closing="Window_Closing">
+    <Grid>
+        <TabControl x:Name="globalTable">
+            <TabItem x:Name="bookTab" Header="Книги">
+                <Grid>
+                    <DataGrid x:Name="bookGrid"
+                              AutoGeneratingColumn="bookGrid_AutoGeneratingColumn"
+                              MouseDoubleClick="bookGrid_MouseDoubleClick" />
+                    <Button x:Name="AddBook"
+                            Content="Добавить книгу"
+                            Style="{StaticResource ResourceKey=Add}"
+                            Click="AddBook_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="readerTab" Header="Читатели">
+                <Grid>
+                    <DataGrid x:Name="readerGrid"
+                              AutoGeneratingColumn="readerGrid_AutoGeneratingColumn"
+                              MouseDoubleClick="readerGrid_MouseDoubleClick"/>
+                    <Button x:Name="AddReader"
+                            Content="Добавить читателя"
+                            Style="{StaticResource ResourceKey=Add}" Click="AddReader_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="Delete"
+                Style="{StaticResource ResourceKey=TopRightCorner}"
+                Content="×"
+                Width="22"
+                FontWeight="Bold"
+                Click="Delete_Click"
+                BorderThickness="0"
+                Padding="0"/>
+        <Button x:Name="ExportXML"
+                Style="{StaticResource ResourceKey=TopRightCorner}"
+                Content="Экспорт XML"
+                Click="ExportXML_Click"
+                Margin="0,0,22,0"
+                FontSize="13"/>
+        <Button x:Name="ImportXML"
+                Style="{StaticResource ResourceKey=TopRightCorner}"
+                Content="Импорт XML"
+                Click="ImportXML_Click"
+                Margin="0,0,121,0"
+                FontSize="13"/>
+        <Button x:Name="ExportXLS"
+                Style="{StaticResource ResourceKey=TopRightCorner}"
+                Content="Экспорт XLS"
+                Click="ExportXLS_Click"
+                Margin="0,0,218,0"
+                FontSize="13"/>
+        <Button x:Name="ExportDOC"
+                Style="{StaticResource ResourceKey=TopRightCorner}"
+                Content="Экспорт DOC"
+                Click="ExportDOC_Click"
+                Margin="0,0,312,0"
+                FontSize="13"/>
+    </Grid>
+</Window>
+

@@ -1,0 +1,15 @@
+﻿<Window x:Class="Program.AuthorsList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Авторы" Height="300" Width="450" Closing="Window_Closing">
+    <Grid>
+        <DataGrid x:Name="authorGrid"
+                  SelectionMode="Single"
+                  AutoGeneratingColumn="authorGrid_AutoGeneratingColumn"
+                  MouseDoubleClick="authorGrid_MouseDoubleClick"/>
+        <Button x:Name="AddAuthor"
+                  Content="Добавить автора"
+                  Style="{StaticResource ResourceKey=Add}"
+                  Click="AddAuthor_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+﻿<Window x:Class="Program.ReaderBooksList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Книги читателя" Height="300" Width="450">
+    <Grid>
+        <DataGrid x:Name="readerBooksGrid"
+                  SelectionMode="Single"
+                  AutoGeneratingColumn="readerBooksGrid_AutoGeneratingColumn"
+                  MouseDoubleClick="readerBooksGrid_MouseDoubleClick"/>
+        <Button x:Name="AddInstance"
+                Content="Выдать книгу"
+                Style="{StaticResource ResourceKey=Add}"
+                Click="AddInstance_Click"/>
+    </Grid>
+</Window>

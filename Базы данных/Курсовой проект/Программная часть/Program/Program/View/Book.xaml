@@ -1,0 +1,85 @@
+﻿<Window x:Class="Program.BookView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Книга" Height="380" Width="300" Closing="Window_Closing" ResizeMode="CanMinimize">
+    <Grid>
+        <Label Content="Название: " Margin="10,10,0,0"/>
+        <TextBox x:Name="Title" Margin="93,12,0,0" Width="180"/>
+        <Label Content="Издательство: " Margin="10,45,0,0"/>
+        <TextBox x:Name="Publisher"  Margin="120,47,0,0" Width="153"/>
+        <Label Content="Год: " Margin="10,80,0,0"/>
+        <TextBox x:Name="Year"  Margin="51,82,0,0" Width="62"/>
+        <Label Content="Страницы: " Margin="125,80,0,0"/>
+        <TextBox x:Name="Pages"  Margin="211,82,0,0" Width="62"/>
+        <Label Content="ISBN: " Margin="10,117,0,0"/>
+        <TextBox x:Name="ISBN"  Margin="59,119,0,0" Width="214"/>
+        <Label Content="Код языка: " Margin="10,152,0,0"/>
+        <TextBox x:Name="Language" Margin="93,154,0,0" Width="50"/>
+        <Button x:Name="SetRu"
+                Style="{StaticResource ResourceKey=SetLang}"
+                Content="ru__RU"
+                Margin="168,154,0,0"
+                Click="SetRu_Click"/>
+        <Button x:Name="SetEn"
+                Style="{StaticResource ResourceKey=SetLang}"
+                Content="en__GB"
+                Margin="223,154,0,0"
+                Click="SetEn_Click"/>
+        <Label Content="Жанр: " Margin="10,189,0,0"/>
+        <ComboBox x:Name="Subject" Margin="79,194,0,0" Width="162"/>
+        <Button x:Name="EditSubjects"
+                Content="☰"
+                FontSize="14"
+                Padding="0"
+                FontWeight="Bold"
+                Style="{StaticResource ResourceKey=SetLang}"
+                Margin="246,194,0,0"
+                Width="27"
+                Height="22" Click="EditSubjects_Click" />
+        <Label Content="Авторы: " Margin="10,224,0,0"/>
+        <ComboBox x:Name="Authors"
+            Style="{StaticResource ResourceKey=MultiSelectComboBox}"
+            Margin="79,229,0,0" 
+            Loaded="Authors_Loaded" SelectionChanged="Authors_SelectionChanged"/>
+        <Button x:Name="EditAuthors"
+                Content="☰"
+                FontSize="14"
+                Padding="0"
+                FontWeight="Bold"
+                Style="{StaticResource ResourceKey=SetLang}"
+                Margin="246,229,0,0"
+                Width="27"
+                Height="22" Click="EditAuthors_Click" />
+        <Label x:Name="IDLabel" Content="ИД: " Margin="10,259,0,0"/>
+        <Label x:Name="ID" Margin="42,259,0,0"/>
+        <Label x:Name="AmountLabel" Content="Кол-во: " Margin="79,259,0,0"/>
+        <Label x:Name="Amount" Margin="153,259,0,0"/>
+        <Button x:Name="Instances"
+                Content="Найти"
+                Style="{StaticResource ResourceKey=SetLang}"
+                Height="27"
+                Width="81"
+                Margin="192,260,0,0" Click="Instances_Click"/>
+        <Button x:Name="Complete" Content="Готово" Click="Complete_Click">
+            <Button.Style>
+                <Style BasedOn="{StaticResource ResourceKey=Add}" TargetType="{x:Type Button}">
+                    <Setter Property="IsEnabled" Value="False" />
+                    <Style.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=Title, Path=(Validation.HasError)}" Value="False" />
+                                <Condition Binding="{Binding ElementName=Publisher, Path=(Validation.HasError)}" Value="False" />
+                                <Condition Binding="{Binding ElementName=Year, Path=(Validation.HasError)}" Value="False" />
+                                <Condition Binding="{Binding ElementName=Pages, Path=(Validation.HasError)}" Value="False" />
+                                <Condition Binding="{Binding ElementName=ISBN, Path=(Validation.HasError)}" Value="False" />
+                                <Condition Binding="{Binding ElementName=Language, Path=(Validation.HasError)}" Value="False" />
+                                <Condition Binding="{Binding ElementName=Subject, Path=(Validation.HasError)}" Value="False" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="IsEnabled" Value="True" />
+                        </MultiDataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>

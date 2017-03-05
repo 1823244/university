@@ -1,0 +1,3 @@
+Deit_vvedenie_v_DB_8e.pdf
+Microsoft SQL Server 2008. Разработка баз данных. Учебный курс Microsoft 70-433 (2010).pdf
+Разработка клиентских Windows-приложений на платформе Microsoft .NET Framework.djvu

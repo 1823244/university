@@ -1,0 +1,11 @@
+﻿<Window x:Class="Program.BookList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Список книг" Height="300" Width="500" Closing="Window_Closing">
+    <Grid>
+        <DataGrid x:Name="bookGrid"
+                  AutoGeneratingColumn="bookGrid_AutoGeneratingColumn"
+                  MouseDoubleClick="bookGrid_MouseDoubleClick"
+                  Margin="0"/>
+    </Grid>
+</Window>
